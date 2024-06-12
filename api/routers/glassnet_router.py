@@ -13,7 +13,7 @@ class Composition(BaseModel):
 router = APIRouter()
 
 
-@router.post("/api/glassnet/predict/")
+@router.post("/v2/api/glassnet/predict/")
 async def predict_glassnet(composition: Composition, glassnet_model=Depends(get_glassnet_model)):
     try:
         predictions = glassnet_model.predict(composition.composition)  # Access the model and make predictions

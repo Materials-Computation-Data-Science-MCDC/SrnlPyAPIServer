@@ -14,7 +14,7 @@ class PaginationParams(BaseModel):
     properties: Optional[str] = None
 # API to load and return glass data with pagination
 
-@router.get("/api/sciglass/data/")
+@router.get("/v2/api/sciglass/data/")
 async def get_sciglass_data(pagination: PaginationParams = Depends()):
     df = sci_glass_service.get_data()  # Load the data into a DataFrame
 
