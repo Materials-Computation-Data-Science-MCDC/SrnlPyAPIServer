@@ -4,16 +4,16 @@
 # from typing import Optional, List
 # import numpy as np
 # from ..services.sci_glass import sci_glass_service
-#
+
 # router = APIRouter()
-#
-# # Define a Pydantic model for pagination
+
+# Define a Pydantic model for pagination
 # class PaginationParams(BaseModel):
 #     page: Optional[int] = 1
 #     per_page: Optional[int] = 100
 #     properties: Optional[str] = None
-# # API to load and return glass data with pagination
-#
+# API to load and return glass data with pagination
+
 # @router.get("/v2/api/sciglass/data/")
 # async def get_sciglass_data(pagination: PaginationParams = Depends()):
 #     df = sci_glass_service.get_data()  # Load the data into a DataFrame
@@ -63,5 +63,5 @@
 #             "metadata": metadata_data
 #         }
 #     }
-#
-# # You can include more API endpoints or logic as needed
+
+# You can include more API endpoints or logic as needed
