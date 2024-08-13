@@ -1,0 +1,10 @@
+version: '3.8'  # Specify the version of Docker Compose
+
+services:
+  srnlpyapiserver:
+    image: SrnlPyAPIServerApp:latest  # Replace with your actual image name if different
+    build:
+      context: .  # Build from the Dockerfile in the current directory
+    ports:
+      - "8000:8000"  # Map port 8000 on the host to port 8000 in the container
+    restart: unless-stopped  # Restart policy to automatically restart the container
