@@ -9,7 +9,7 @@ DOCKER_TAG=latest  # Replace with your desired Docker tag
 # Install pip-tools for dependency management
 .PHONY: pip-tools-install
 pip-tools-install:
-	@pip install pip-tools
+	@pip3 install pip-tools
 
 # Install pyenv
 .PHONY: pyenv-install
@@ -77,9 +77,9 @@ generate-requirements: pip-tools-install
 .PHONY: deps-install
 deps-install: generate-requirements pyenv-local
 	@echo "Upgrading setuptools..."
-	@pip install --upgrade setuptools
+	@pip3 install --upgrade setuptools
 	@echo "Installing dependencies from requirements.txt..."
-	@pip install -r requirements.txt
+	@pip3 install -r requirements.txt
 
 # Combined installation
 .PHONY: install
